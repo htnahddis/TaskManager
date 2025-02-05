@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
 import {Routes, Route, Navigate, Outlet , useLocation, useNavigate} from "react-router-dom"
 import {useForm} from "react-hook-form"
-
+import Textbox from '../components/Textbox';
+import Button from '../components/Button';
 
 function Login() {
   const user = "";
@@ -49,8 +50,29 @@ return (<>
                   <p className='text-blue-600 text-3xl font-bold text-center'>
                     Welcome Back!
                   </p>
-                  <span>Keep all your crediential safe</span>
+                  <p className='text-center text-base text-grey-700'
+                  >Keep all your crediential safe</p>
                 </div>
+                <div className='flex flex-col gap-y-5'>
+                  <Textbox
+                  placeholder = "email@example.com"
+                  type= "email"
+                  name= "email"
+                  label ="Email Address"
+                  register= {register("email",{required: " Email Address is required!!"})}
+                  error = {errors.email? errors.email.message : ""}/>
+
+                <Textbox
+                  placeholder = "your password"
+                  type= "password"
+                  name= "password"
+                  label ="Password"
+                  register= {register("password",{required: " Password is required!!"})}
+                  error = {errors.password? errors.password.message : ""}/>
+                <span className='text-sm text-gray-600  hover:text-blue-600 hover:underline cursor-pointer'>Forget Password?</span>
+                
+                </div>
+    
 
 
                </form>
