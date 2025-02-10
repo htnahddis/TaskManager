@@ -70,6 +70,13 @@ return (<>
                   register= {register("password",{required: " Password is required!!"})}
                   error = {errors.password? errors.password.message : ""}/>
                 <span className='text-sm text-gray-600  hover:text-blue-600 hover:underline cursor-pointer'>Forget Password?</span>
+                <Button
+                
+                type = 'submit'
+                label = 'submit'
+                className = 'w-full h-10 bg-blue-700 text-white'>
+
+                </Button>
                 
                 </div>
     
