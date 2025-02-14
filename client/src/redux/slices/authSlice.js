@@ -6,6 +6,10 @@ const initialState = {
 
 };
 
+//This is authsice, work n understadning this more 
+//I hope this gets over by tomorrow itself 
+c
+
 const authSlice = {
     name: "authSlice",
     initialState,
