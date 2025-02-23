@@ -11,7 +11,7 @@ import Login from "./pages/Login"
 import { Toaster } from 'sonner';
 import { useSelector } from 'react-redux'
 
-//The goal is to complete this by tomorrow itself, along with mmy andriod project
+
 
 function Layout () {
   const {user}= useSelector((state) => state.auth);
